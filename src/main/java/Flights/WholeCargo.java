@@ -8,7 +8,9 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 
-
+/**
+ *  The WholeCargo class represents Cargo entity in JSON file containing data of Cargo (including baggage and cargo)
+ */
 
 public class WholeCargo implements Jsonable{
     private int flightId;
@@ -35,6 +37,10 @@ public class WholeCargo implements Jsonable{
     public void setBaggage(ArrayList<Baggage> baggage){this.baggage = baggage;}
     public void setCargo(ArrayList<Cargo> cargo){this.cargo = cargo;}
 
+    /**
+     *  the sumCargoWeight method calculates and returns sum of cargo weight.
+     * @return double sum of cargo weight in kg
+     */
     public double sumCargoWeight(){
         double wholeWeight = 0;
         for(Cargo load : cargo){
@@ -47,6 +53,11 @@ public class WholeCargo implements Jsonable{
         }
         return wholeWeight;
     }
+
+    /**
+     *  the sumBaggageWeight method calculates and returns sum of baggage weight.
+     * @return double sum of baggage weight in kg
+     */
 
     public double sumBaggageWeight(){
         double wholeWeight = 0;
@@ -61,6 +72,11 @@ public class WholeCargo implements Jsonable{
         return wholeWeight;
     }
 
+
+    /**
+     *  the sumTotalWeight method calculates and returns sum of total Cargo weight, including baggage and cargo.
+     * @return double sum of Cargo weight in kg
+     */
     public double sumTotalWeight(){
         return sumCargoWeight() + sumBaggageWeight();
     }

@@ -14,9 +14,17 @@ import java.util.stream.Collectors;
 
 
 /**
- *  The Parser class provides methods that parse JSON files
+ *  The Parser class provides methods that parse JSON files containing data of flights and cargo entities and maps them to
+ *  ArrayLists of Flight and WholeCargo objects.
  */
 public class Parser {
+    /**
+     *  Inner class Flight_s is almost identical to Flight class, but the departureDate is of type String.
+     *  It is used to create Flight objects after mapping content of JSON file to Flight_s objects.
+     *  It stems from the fact that it's hard to map JSON String to joda.DateTime using DozerBeanMapper,
+     *  but it's easy to initialize joda.DateTime later with String.
+     *
+     */
     public static class Flight_s{
         private int flightId;
         private int flightNumber;
@@ -32,11 +40,11 @@ public class Parser {
     }
 
     /**
-     * parseFlight is used to parse JSON flight with arrays containing Flight Entities.
+     * parseFlight is used to parse JSON file containing data of Flight entities and maps them to ArrayList of Flight class objects.
      *
      *
      * @param jsonPath path to the JSON file that contains data of Flight entities
-     * @return ArrayList<Flight></> ArrayList containing objects of Flight class that are initialized with the date from JSON file.
+     * @return ArrayList<Flight></> ArrayList containing objects of Flight class objects that are initialized with the data from JSON file.
      * @throws IOException
      * @throws JsonException
      */
@@ -62,6 +70,14 @@ public class Parser {
 
     }
 
+    /**
+     * parseCargo is used to parse JSON file containing data of Cargo entities and maps them to ArrayList of WholeCargo class objects.
+     *
+     * @param jsonPath path to the JSON file that contains data of WholeCargo entities
+     * @return ArrayList<WholeCargo></> ArrayList containing objects of WholeCargo class objects that are initialized with the data from JSON file.
+     * @throws IOException
+     * @throws JsonException
+     */
     public static ArrayList<WholeCargo> parseCargo(String jsonPath) throws IOException, JsonException{
         try (FileReader fileReader = new FileReader((jsonPath))) {
             //working .json to Array<Flights.Cargo> code

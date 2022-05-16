@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
 
+/**
+ * The Baggage class represents single baggage object in Cargo entity.
+ */
+
 public class Baggage implements Load, Jsonable {
     private int id;
     private int weight;

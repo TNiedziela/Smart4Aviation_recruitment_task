@@ -6,15 +6,11 @@ import com.github.cliftonlabs.json_simple.Jsonable;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.log4j.helpers.ISO8601DateFormat;
 import org.joda.time.*;
-import org.joda.time.format.DateTimeFormatter;
-import org.joda.time.format.ISODateTimeFormat;
+
+/**
+ *  The Flight class represents Flight entity in JSON file containing data of flights.
+ */
 
 public class Flight implements Jsonable{
     private int flightId;
@@ -25,14 +21,6 @@ public class Flight implements Jsonable{
 
     //constructors
     public Flight(){}
-
-//    public Flight(int flightId, int flightNumber, String departureAirportIATACode, String arrivalAirportIATACode, DateTime departureDate){
-//        this.flightId = flightId;
-//        this.flightNumber = flightNumber;
-//        this.departureAirportIATACode = departureAirportIATACode;
-//        this.arrivalAirportIATACode = arrivalAirportIATACode;
-//        this.departureDate = departureDate;
-//    }
 
     public Flight(int flightId, int flightNumber, String departureAirportIATACode, String arrivalAirportIATACode, DateTime departureDate){
         this.flightId = flightId;

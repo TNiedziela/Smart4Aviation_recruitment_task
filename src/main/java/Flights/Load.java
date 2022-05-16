@@ -1,7 +1,7 @@
 package Flights;
 
 /**
- * The Load interface what functionalities cargo classes (cargo and baggage) should have.
+ * The Load interface specify what functionalities cargo classes (cargo and baggage) should have.
  */
 public interface Load{
     public int getId();
