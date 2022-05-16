@@ -1,0 +1,38 @@
+[
+  {
+    "flightId": 0,
+    "flightNumber": 3100,
+    "departureAirportIATACode": "SEA",
+    "arrivalAirportIATACode": "GDN",
+    "departureDate": "2021-12-27T07:40:59-01:00"
+  },
+  {
+    "flightId": 1,
+    "flightNumber": 3424,
+    "departureAirportIATACode": "YYZ",
+    "arrivalAirportIATACode": "GDN",
+    "departureDate": "2021-12-27T03:55:14-01:00"
+  },
+  {
+    "flightId": 2,
+    "flightNumber": 6359,
+    "departureAirportIATACode": "SEA",
+    "arrivalAirportIATACode": "PPX",
+    "departureDate": "2021-12-27T06:43:29-02:00"
+  },
+  {
+    "flightId": 3,
+    "flightNumber": 9965,
+    "departureAirportIATACode": "YYT",
+    "arrivalAirportIATACode": "GDN",
+    "departureDate": "2021-12-27T12:31:18-01:00"
+  },
+  {
+    "flightId": 4,
+    "flightNumber": 1983,
+    "departureAirportIATACode": "YYT",
+    "arrivalAirportIATACode": "KRK",
+    "departureDate": "2015-09-15T06:52:42-02:00"
+  }
+
+]
