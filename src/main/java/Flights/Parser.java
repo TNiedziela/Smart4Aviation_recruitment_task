@@ -62,7 +62,7 @@ public class Parser {
             ArrayList<Flight_s> flightPreRegister = new ArrayList<>();
             flightPreRegister= o.stream()
                     .map(x -> mapper.map(x, Flight_s.class)).collect(Collectors.toCollection(ArrayList::new));
-            for(var fl :flightPreRegister){
+            for(Flight_s fl :flightPreRegister){
                 flights.add(new Flight(fl.flightId, fl.flightNumber, fl.departureAirportIATACode, fl.arrivalAirportIATACode, new DateTime(fl.departureDate)));
             }
             return flights;

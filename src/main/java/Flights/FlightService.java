@@ -112,7 +112,7 @@ public class FlightService {
      */
     public int getDepartingNumber(String IATAcode, DateTime departureDate){
         int departingNumber = 0;
-        for(var flight: flightsRegister){
+        for(Flight flight: flightsRegister){
             if(flight.getDepartureAirportIATACode().equals(IATAcode) && departureDate.toLocalDate().isEqual(flight.getDepartureDate().toLocalDate())){
                 departingNumber++;
             }
@@ -130,7 +130,7 @@ public class FlightService {
      */
     public int getArrivingNumber(String IATAcode, DateTime arriveTime){
         int arrivingNumber = 0;
-        for(var flight: flightsRegister){
+        for(Flight flight: flightsRegister){
             if(flight.getArrivalAirportIATACode().equals(IATAcode) && arriveTime.toLocalDate().isEqual(flight.getDepartureDate().toLocalDate())){
                 arrivingNumber++;
             }
